@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Customer Self-Service Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Insurance Customer Self-Service Portal</h1>
+        <nav>
+            <button onclick="showSection('fileClaim')">File a Claim</button>
+            <button onclick="showSection('trackClaims')">Track Claims</button>
+            <button onclick="showSection('knowledgeBase')">Search Knowledge Base</button>
+            <button onclick="showSection('contactUs')">Contact Us</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <section id="fileClaim" class="hidden">
+                <h2>Submit a New Insurance Claim</h2>
+                <form id="claimForm">
+                    <label for="policyNumber">Policy Number:</label>
+                    <input type="text" id="policyNumber" placeholder="Enter your policy number" required>
+
+                    <label for="incidentDate">Incident Date:</label>
+                    <input type="date" id="incidentDate" required>
+
+                    <label for="incidentDescription">Incident Description:</label>
+                    <textarea id="incidentDescription" placeholder="Describe the incident in detail"
+                        required></textarea>
+
+                    <label for="fileUpload">Attach Supporting Documents:</label>
+                    <input type="file" id="fileUpload" multiple>
+
+                    <button type="submit">Submit Claim</button>
+                </form>
+                <p id="formMessage"></p>
+            </section>
+
+            <section id="trackClaims" class="hidden">
+                <h2>Track Your Claim Status</h2>
+                <table id="claimsTable">
+                    <thead>
+                        <tr>
+                            <th>Claim Number</th>
+                            <th>Status</th>
+                            <th>Date Submitted</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="claimsTableBody">
+                        <!-- Rows dynamically populated via JavaScript -->
+                    </tbody>
+                </table>
+            </section>
+
+
+            <section id="knowledgeBase" class="hidden">
+                <h2>Search Knowledge Base</h2>
+                <input type="text" id="searchBar" placeholder="Search...">
+                <div id="searchResults"></div>
+            </section>
+
+
+            <!-- Contact Us Section -->
+            <section id="contactUs" class="hidden">
+                <h2>Contact Us</h2>
+                <p>Have questions or need assistance? Get in touch with us!</p>
+                <div class="contact-grid">
+                    <!-- <div class="contact-details">
+                        <h3>Our Office</h3>
+                        <p><strong>Address:</strong> 6010 W Spring Creek Pkwy, Plano, TX 75024</p>
+                        <p><strong>Phone:</strong> +1 (000) 000-0000</p>
+                        <p><strong>Email:</strong> support@technovert.com</p>
+                    </div> -->
+                    <div class="contact-form">
+                        <h3>Send Us a Message</h3>
+                        <form id="contactForm">
+                            <label for="contactName">Name</label>
+                            <input type="text" id="contactName" placeholder="Your name" required>
+                            <label for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" placeholder="Your email" required>
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" rows="5" placeholder="Your message" required></textarea>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <div class="feature-box">
+        <div class="feature-item">
+            <div class="feature-image">
+                <img src="https://i.pinimg.com/originals/07/60/20/076020a203b21033248ca133a05fea16.png"
+                    alt="Insurance Feature 1">
+            </div>
+            <div class="feature-text">
+                <h2>Empowering Your Insurance Journey</h2>
+                <p>
+                    Streamline your insurance claims and effortlessly track their status. Our portal offers a seamless
+                    experience for managing your policies, providing real-time updates, and simplifying the claims
+                    process—all in one place.
+                </p>
+                <p>
+                    The insurance self-service portal is a software solution that is dedicated to automating workflow
+                    operations provided by insurers to streamline insurance-related services to policyholders such as
+                    24/7 access to information, claim management, easy access to knowledge base and segment data
+                    analytics. These help effectively enrich customer needs faster while reducing time and cost for
+                    every insurance related issue.
+                </p>
+                <P>
+                    Need assistance? Chat with our chatbot for quick, easy access to support and personalized guidance
+                    at any time. Get the help you need, when you need it!
+                </P>
+            </div>
+        </div>
+    </div>
+
+    <div class="feature-box">
+        <div class="feature-item">
+            <div class="feature-image">
+                <img src="https://wrighttechnologies.com/wp-content/uploads/2021/01/customer-self-service-portal-cssp.png"
+                    alt="Insurance Feature 2">
+            </div>
+            <div class="feature-text">
+                <h2>Track Your Claims Effortlessly</h2>
+                <p>
+                    Keep track of all your claims in one place. Get real-time updates on your claim status with our
+                    user-friendly interface.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="footer-container">
+            <!-- Company Information -->
+            <div class="footer-section">
+                <h3>Insurance Portal</h3>
+                <p>
+                    The insurance self-service portal is a software solution that is dedicated to automating workflow
+                    operations provided by insurers to streamline insurance-related services to policyholders such as
+                    24/7 access to information, claim management, easy access to knowledge base and segment data
+                    analytics. These help effectively enrich customer needs faster while reducing time and cost for
+                    every insurance related issue.
+                </p>
+            </div>
+
+            <!-- Connect with Us -->
+            <div class="footer-section">
+                <h4>Connect with Us</h4>
+                <ul class="social-links">
+                    <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li>File a Claim</li>
+                    <li>Track Claims</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>© 2023, Insurance Portal</p>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </footer>
+
+
+    <!-- Chatbot Floating Widget -->
+    <div class="chatbot-widget">
+        <button class="chatbot-toggle" onclick="toggleChatbot()">💬</button>
+        <div class="chatbot-content" id="chatbotContent">
+            <iframe width="100%" height="100%" allow="microphone;"
+                src="https://console.dialogflow.com/api-client/demo/embedded/56220f88-c30d-4e12-9f77-68f54f6be6d2">
+            </iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
